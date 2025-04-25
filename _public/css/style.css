@@ -1,3 +1,39 @@
+
+@font-face {
+    font-family: 'Bizzarri Text';
+    src: url(/fonts/BizzarriText-Regular.otf);
+}
+@font-face {
+    font-family: 'Bizzarri Text';
+    font-style: italic;
+    src: url(/fonts/BizzarriText-Italic.otf);
+}
+@font-face {
+    font-family: 'Bizzarri Text';
+    font-weight: bold;
+    src: url(/fonts/BizzarriText-Bold.otf);
+}
+@font-face {
+    font-family: 'Bizzarri Text';
+    font-weight: bold;
+    font-style: italic;
+    src: url(/fonts/BizzarriText-BoldItalic.otf);
+}
+@font-face {
+    font-family: 'Gooper';
+    src: url(/fonts/Gooper7-Regular.otf);
+}
+@font-face {
+    font-family: 'Gooper';
+    font-style: italic;
+    src: url(/fonts/Gooper7-Italic.otf);
+}
+@font-face {
+    font-family: 'Gooper';
+    font-weight: bold;
+    src: url(/fonts/Gooper7-Bold.otf);
+}
+
 body {
     --fgcolor: #000;
     --bgcolor: #fff;
@@ -22,12 +58,49 @@ body {
     --mainradius: 0.25rem;
 
 
-    font-family: Helvetica;
+
+    font-family: Gooper;
     font-size: 16px;
+
+    padding: .5rem;
+}
+main p {
+    margin: 1rem 0;
+}
+img {
+    display: block;
+    margin: 1rem 0;
+}
+a {
+    color: var(--acolor);
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
 }
 
-a {
 
+#background {
+    display: none;
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+#background img {
+    width: 100px;
+    position: absolute;
+    left:0;
+    animation: rotate 5s linear infinite;
+}
+#background img:nth-child(2n) {
+    animation-direction: reverse;
+}
+@keyframes rotate {
+    from{transform: rotate(0deg)}
+    to{transform:rotate(360deg)}
 }
 
 header, main, footer {
@@ -38,14 +111,69 @@ header, main, footer {
 }
 
 header {
-    text-align: center;
 }
 header img {
     display: block;
     max-width: 300px;
     margin: auto;
-    animation: wiggle 0.5s infinite steps(1);
+    animation: wiggle 2s infinite steps(1);
 }
+
+
+main img {
+    border-radius: var(--mainradius);
+}
+#mailinglist a {
+    padding: 0.25rem;
+    margin: -0.25rem;
+    background-color: yellow;
+}
+.sectiontitle {
+    font-family: 'Bizzarri Text';
+    font-style: italic;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.showlink {
+    /* position: relative; */
+    display: block;
+    margin-top: 1rem;
+
+
+
+    & img {
+        border: 1px solid var(--fgcolor);
+        border-radius: var(--mainradius);
+        box-shadow: 2px 2px black;
+        margin: 0;
+    }
+
+    & .vidthumbnail {
+        position: relative;
+    }
+    & .videotitle {
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        color: white;
+        font-family: 'Bizzarri Text';
+        /* font-size: clamp(1.5rem, 6cqw, 2.5rem); */
+        font-size: 2rem;
+        line-height: 1.1;
+        text-align: center;
+        text-shadow: -2px -2px var(--darkblue), 2px -2px var(--darkblue), 2px 2px var(--darkblue), -2px 2px var(--darkblue);
+    }
+    & .caption {
+        margin-top:  0.5rem;
+    }
+}
+  
+
+
+
 
 footer {
     text-align: center;
