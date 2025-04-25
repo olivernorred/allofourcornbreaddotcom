@@ -1,0 +1,57 @@
+body {
+    --fgcolor: #000;
+    --bgcolor: #fff;
+    --acolor: #00b;
+    --altbgcolor: #c8f1ff;
+    --fgtranslucent: rgba(0, 0, 0, 0.7);
+    --mildfgcolor: #505050;
+    --translucent: rgba(0, 0, 0, 0.05);
+    --bgimage: ;
+    --darkblue: rgb(13, 6, 40);
+    --cream: rgb(255, 241, 208);
+    --yellow: rgb(220, 170, 0);
+    --red: rgb(214, 40, 57);
+    --blue: rgb(45, 167, 212);
+    --white: rgb(255, 255, 255);
+    --displayfont: "Gooper Light", sans-serif;
+    --headerfont: "Gooper Light", degular, sans-serif;
+    --smallheadingfont: "Gooper", sans-serif;
+    --monofont: "DM Mono", monospace;
+    --bodyfont: "Literata", serif;
+    --bigwidth: 1000px;
+    --mainradius: 0.25rem;
+
+
+    font-family: Helvetica;
+    font-size: 16px;
+}
+
+a {
+
+}
+
+header, main, footer {
+    max-width: 650px;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+header {
+    text-align: center;
+}
+header img {
+    display: block;
+    max-width: 300px;
+    margin: auto;
+    animation: wiggle 0.5s infinite steps(1);
+}
+
+footer {
+    text-align: center;
+}
+
+@keyframes wiggle {
+    0% {transform: rotate(-1deg)}
+    50% {transform: rotate(1deg)}
+}
