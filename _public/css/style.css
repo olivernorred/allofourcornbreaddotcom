@@ -64,9 +64,25 @@ body {
 
     padding: .5rem;
 }
-main p {
-    margin: 1rem 0;
+
+#linksbar {
+    display: flex;
+    gap: 1rem;
+    width: fit-content;
+    margin: auto;
 }
+#linksbar > * {
+    width: 50px;
+    transition: 0.1s;
+    &:hover {
+        transform: translate(0,-2px);
+    }
+    & img {
+        width: 100%;
+    }
+}
+
+
 img {
     display: block;
     margin: 1rem 0;
@@ -112,16 +128,18 @@ header, main, footer {
 
 header {
 }
-header img {
+header > img {
     display: block;
     max-width: 300px;
     margin: auto;
     animation: wiggle 2s infinite steps(1);
 }
 
-
+main p {
+    margin: 1rem 0;
+}
 main img {
-    border-radius: var(--mainradius);
+    border-radius: 1rem;
 }
 #mailinglist a {
     padding: 0.25rem;
@@ -135,11 +153,19 @@ main img {
     text-align: center;
     margin-top: 4rem;
 }
+p.caption {
+    font-style: italic;
+    margin-top: -.5rem;
+    color: var(--fgtranslucent);
+}
+p.caption::before {
+    content: "\2191     ";
+}
 
 .showlink {
     /* position: relative; */
     display: block;
-    margin-top: 1rem;
+    margin-top: 2rem;
 
 
 
@@ -177,6 +203,9 @@ main img {
 
 footer {
     text-align: center;
+}
+footer p {
+    margin-top: .25rem;
 }
 
 @keyframes wiggle {
