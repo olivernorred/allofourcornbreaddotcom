@@ -142,7 +142,9 @@ header #emaillistbutton {
     
 }
 .mailinglistbutton {
-
+    position: relative;
+    padding: 2px .25rem;
+    border-radius: 0;
     --shadowdistance: 2px;
     cursor: pointer;
     background: white;
@@ -153,11 +155,13 @@ header #emaillistbutton {
     animation: wiggle 0.8s steps(1) infinite;
 
     &:hover {
-        transform: translate(-1px, -1px);
+        top: -1px;
+        left: -1px;
         box-shadow: calc(var(--shadowdistance) + 1px) calc(var(--shadowdistance) + 1px) black;
     }
     &:active {
-        transform: translate(var(--shadowdistance), var(--shadowdistance));
+        top: var(--shadowdistance);
+        left: var(--shadowdistance);
         box-shadow: 0px 0px black;
     }
 }
