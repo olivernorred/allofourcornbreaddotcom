@@ -100,7 +100,7 @@ body {
 }
 
 
-img {
+img, video {
     display: block;
     margin: 1rem 0;
 }
@@ -139,7 +139,7 @@ header > img {
 main p {
     margin: 1rem 0;
 }
-main img {
+main img, main video {
     border-radius: 1rem;
 }
 main h2 {
