@@ -4,7 +4,8 @@ node_modules/
 _src/images/cornbread sunset gif.mov
 _src/images/cornbread sunset gif.mov
 _public/images/cornbread sunset gif.gif
-.DS_Store
-.DS_Store
-.DS_Store
-.DS_Store
+../.DS_Store
+./.DS_Store
+./_public/.DS_Store
+./_src/.DS_Store
+**/.DS_Store
