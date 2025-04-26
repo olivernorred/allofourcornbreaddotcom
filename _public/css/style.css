@@ -76,6 +76,7 @@ body {
     animation: movebackground 5s linear infinite;
     transform: rotate(-15deg);
     /* filter: blur(2px); */
+    transition: background-image .1s ease-in-out;
 }
 @keyframes movebackground {
     from { background-position: 0 0;}
@@ -174,8 +175,8 @@ main img, main video {
 }
 main h2 {
     text-align: center;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+    margin-top: 1rem;
+    /* margin-bottom: 1rem; */
 }
 
 #firstgrid {
@@ -203,7 +204,7 @@ main h2 {
     text-align: center;
     margin-top: 2rem;
     padding-top: 2rem;
-    border-top: 2px solid var(--fgcolor);
+    /* border-top: 2px solid var(--fgcolor); */
 }
 p.caption {
     font-style: italic;
