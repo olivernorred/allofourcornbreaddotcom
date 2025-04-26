@@ -146,6 +146,7 @@ header #emaillistbutton {
     --shadowdistance: 2px;
     cursor: pointer;
     background: white;
+    color: black;
     border: 1px solid black;
     box-shadow: var(--shadowdistance) var(--shadowdistance) black;
     transition: .02s;
