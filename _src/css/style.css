@@ -145,11 +145,15 @@ main img {
 main h2 {
     text-align: center;
     margin-top: 2rem;
+    margin-bottom: 1rem;
 }
 
 #firstgrid {
     display: flex;
     gap: 1rem;
+    & > *{
+        width: 100%;
+    }
 }
 @media only screen and (max-width: 600px) {
     #firstgrid {
