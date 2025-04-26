@@ -150,7 +150,7 @@ header #emaillistbutton {
     border: 1px solid black;
     box-shadow: var(--shadowdistance) var(--shadowdistance) black;
     transition: .02s;
-    animation: wiggle 1s steps(1) infinite;
+    animation: wiggle 0.8s steps(1) infinite;
 
     &:hover {
         transform: translate(-1px, -1px);
