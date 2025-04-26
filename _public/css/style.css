@@ -135,6 +135,31 @@ header > img {
     margin: auto;
     animation: wiggle 2s infinite steps(1);
 }
+header #emaillistbutton {
+    margin: auto;
+    width: fit-content;
+    font-size: 1.2rem;
+    
+}
+.mailinglistbutton {
+
+    --shadowdistance: 2px;
+    cursor: pointer;
+    background: white;
+    border: 1px solid black;
+    box-shadow: var(--shadowdistance) var(--shadowdistance) black;
+    transition: .02s;
+    animation: wiggle 1s steps(1) infinite;
+
+    &:hover {
+        transform: translate(-1px, -1px);
+        box-shadow: calc(var(--shadowdistance) + 1px) calc(var(--shadowdistance) + 1px) black;
+    }
+    &:active {
+        transform: translate(var(--shadowdistance), var(--shadowdistance));
+        box-shadow: 0px 0px black;
+    }
+}
 
 main p {
     margin: 1rem 0;
@@ -149,6 +174,7 @@ main h2 {
 }
 
 #firstgrid {
+    margin-top: 2rem;
     display: flex;
     gap: 1rem;
     & > *{
@@ -163,20 +189,14 @@ main h2 {
 
 
 
-#mailinglist a {
-    display: inline-block;
-    padding: 0.25rem;
-    margin: -0.25rem;
-    background-color:;
-    animation: wiggle 1s steps(1) infinite;
-}
+
 .sectiontitle { /*h1*/
     font-family: 'Bizzarri Text';
     font-weight: normal;
     font-style: italic;
     font-size: 2rem;
     text-align: center;
-    margin-top: 4rem;
+    margin-top: 2rem;
     padding-top: 2rem;
     border-top: 2px solid var(--fgcolor);
 }
