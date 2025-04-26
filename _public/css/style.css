@@ -44,7 +44,7 @@ body {
     --translucent: rgba(0, 0, 0, 0.05);
     --bgimage: ;
     --darkblue: rgb(13, 6, 40);
-    --cream: rgb(255, 241, 208);
+    --cream: #fff1d0;
     --yellow: rgb(220, 170, 0);
     --red: rgb(214, 40, 57);
     --blue: rgb(45, 167, 212);
@@ -73,7 +73,7 @@ body {
     left: -20vw;
     background-image: url('/images/9pointstar-cream.svg');
     background-size: 20vw;
-    animation: movebackground 5s linear infinite;
+    animation: movebackground 16s linear infinite;
     transform: rotate(-15deg);
     /* filter: blur(2px); */
     transition: background-image .1s ease-in-out;
@@ -187,11 +187,18 @@ main h2 {
         width: 100%;
     }
 }
-@media only screen and (max-width: 600px) {
-    #firstgrid {
+.quotewithpicture {
+    display: grid;
+    gap: .75rem;
+    grid-template-columns: 1fr 3fr;
+    & img {
         display: block;
+        margin: auto;
+        width: 100%;
+        max-width: 180px;
     }
 }
+
 
 
 
@@ -215,7 +222,9 @@ p.caption::before {
     content: "\2191     ";
 }
 
-
+#recordssection {
+    text-align: center;
+}
 .albumcoverimage {
     display: block;
     max-width: 500px;
@@ -294,4 +303,26 @@ footer p {
 @keyframes wiggle {
     0% {transform: rotate(-1deg)}
     50% {transform: rotate(1deg)}
+}
+
+
+
+/* for desktop */
+#bandphoto img:first-of-type {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    #firstgrid {
+        display: block;
+    }
+    .quotewithpicture {
+        display: block;
+    }
+    #bandphoto img:nth-of-type(1) {
+        display: block;
+    }
+    #bandphoto img:nth-of-type(2) {
+        display: none;
+    }
 }
