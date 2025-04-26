@@ -69,13 +69,13 @@ body {
     position: fixed;
     width: 200vw;
     height: 200vh;
-    top: -80vw;
-    left: -80vw;
+    top: -20vw;
+    left: -20vw;
     background-image: url('/images/9pointstar-cream.svg');
     background-size: 20vw;
     animation: movebackground 5s linear infinite;
     transform: rotate(-15deg);
-    filter: blur(2px)
+    /* filter: blur(2px); */
 }
 @keyframes movebackground {
     from { background-position: 0 0;}
@@ -168,7 +168,7 @@ p.caption::before {
         }
         & img {
             display: block;
-            width: 4rem;
+            width: 50px;
         }
     }
 }

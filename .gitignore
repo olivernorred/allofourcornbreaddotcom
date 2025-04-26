@@ -1,2 +1,6 @@
 # Ignore installed npm modules
 node_modules/
+*.mov
+_src/images/cornbread sunset gif.mov
+_src/images/cornbread sunset gif.mov
+_public/images/cornbread sunset gif.gif
