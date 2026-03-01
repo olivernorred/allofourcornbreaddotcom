@@ -20,6 +20,26 @@
     src: url(/fonts/BizzarriText-BoldItalic.otf);
 }
 @font-face {
+    font-family: 'Souvenir';
+    src: url(/fonts/Souvenir.ttf);
+}
+@font-face {
+    font-family: 'Souvenir';
+    font-style: italic;
+    src: url(/fonts/SouvenirI.ttf);
+}
+@font-face {
+    font-family: 'Souvenir';
+    font-weight: bold;
+    src: url(/fonts/SouvenirB.ttf);
+}
+@font-face {
+    font-family: 'Souvenir';
+    font-weight: bold;
+    font-style: italic;
+    src: url(/fonts/SouvenirBI.ttf);
+}
+@font-face {
     font-family: 'Gooper';
     src: url(/fonts/Gooper7-Regular.otf);
 }
@@ -33,6 +53,21 @@
     font-weight: bold;
     src: url(/fonts/Gooper7-Bold.otf);
 }
+@font-face {
+    font-family: 'Literata';
+    src: url(/fonts/LiterataTT-CaptionRegular.woff2);
+}
+@font-face {
+    font-family: 'Literata';
+    font-weight: bold;
+    src: url(/fonts/LiterataTT-CaptionBold.woff2);
+}
+@font-face {
+    font-family: 'Literata';
+    font-style: italic;
+    src: url(/fonts/LiterataTT-CaptionItalic.woff2);
+}
+
 
 body {
     --fgcolor: #000;
@@ -47,10 +82,10 @@ body {
     --cream: #fff1d0;
     --yellow: rgb(220, 170, 0);
     --red: rgb(214, 40, 57);
-    --blue: rgb(45, 167, 212);
+    --blue: #2da7d4;
     --white: rgb(255, 255, 255);
-    --displayfont: "Gooper Light", sans-serif;
-    --headerfont: "Gooper Light", degular, sans-serif;
+    --displayfont: "Souvenir", sans-serif;
+    --headerfont: "Souvenir", sans-serif;
     --smallheadingfont: "Gooper", sans-serif;
     --monofont: "DM Mono", monospace;
     --bodyfont: "Literata", serif;
@@ -59,10 +94,12 @@ body {
 
 
 
-    font-family: Gooper;
+    font-family: 'Literata', 'Times New Roman', Times, serif;
     font-size: 16px;
 
     padding: 1rem;
+    background: var(--bgcolor);
+    color: var(--fgcolor);
 }
 #background {
     z-index: -1;
@@ -77,6 +114,7 @@ body {
     transform: rotate(-15deg);
     /* filter: blur(2px); */
     transition: background-image .1s ease-in-out;
+    display:none;
 }
 @keyframes movebackground {
     from { background-position: 0 0;}
@@ -130,7 +168,7 @@ main {
 
 header {
 }
-header > img {
+header > a img {
     display: block;
     max-width: 300px;
     margin: auto;
@@ -178,7 +216,9 @@ main h2 {
     margin-top: 1rem;
     /* margin-bottom: 1rem; */
 }
+b {
 
+}
 #firstgrid {
     margin-top: 2rem;
     display: flex;
@@ -187,6 +227,10 @@ main h2 {
         width: 100%;
     }
 }
+/* #abstract b {
+    font-weight: normal;
+    font-variation-settings: "wght" 700;
+} */
 .quotewithpicture {
     display: grid;
     gap: .75rem;
@@ -200,17 +244,20 @@ main h2 {
 }
 
 
-
+#decorative-border {
+    max-width: 500px;
+    margin: 5rem auto;
+}
 
 
 .sectiontitle { /*h1*/
-    font-family: 'Bizzarri Text';
+    font-family: var(--headerfont);
     font-weight: normal;
-    font-style: italic;
+    /* font-style: italic; */
     font-size: 2rem;
     text-align: center;
-    margin-top: 2rem;
-    padding-top: 2rem;
+    margin-top: 0;
+    padding-top: 0;
     /* border-top: 2px solid var(--fgcolor); */
 }
 p.caption {
@@ -222,8 +269,31 @@ p.caption::before {
     content: "\2191     ";
 }
 
+.albumlinkcontainer {
+    margin: 3rem auto;
+    max-width: 800px;
+}
+.albumlinkimage {
+    margin: auto;
+    border-radius: 4px;
+}
+.albumlinkinfo {
+    /* font-family: 'Courier New', Courier, monospace; */
+    text-align: left;
+}
+
 #recordssection {
     text-align: center;
+}
+.album {
+    max-width: 500px;
+    margin:auto;
+    border: 1px solid var(--fgcolor);
+    padding: .5rem;
+}
+.album > * {
+    text-align: left;
+    margin: .5rem 0;
 }
 .albumcoverimage {
     display: block;
@@ -236,7 +306,7 @@ p.caption::before {
     display: flex;
     gap: 1rem;
     width: fit-content;
-    margin: auto;
+    margin: 1rem 0;
     & > div {
         &:hover {
             transform: translate(0, -2px);
@@ -247,6 +317,7 @@ p.caption::before {
         }
     }
 }
+
 
 
 #videolinks {
