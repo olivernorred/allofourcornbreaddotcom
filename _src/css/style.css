@@ -90,7 +90,7 @@ body {
     --monofont: "DM Mono", monospace;
     --bodyfont: "Literata", serif;
     --bigwidth: 1000px;
-    --mainradius: 0.25rem;
+    --mainradius: 0;
 
 
 
@@ -209,7 +209,7 @@ main p {
     margin: 1rem 0;
 }
 main img, main video {
-    border-radius: 1rem;
+    border-radius: 0;
 }
 main h2 {
     text-align: center;
@@ -245,7 +245,7 @@ b {
 
 
 #decorative-border {
-    max-width: 500px;
+    max-width: 300px;
     margin: 5rem auto;
 }
 
@@ -275,7 +275,7 @@ p.caption::before {
 }
 .albumlinkimage {
     margin: auto;
-    border-radius: 4px;
+    border-radius: 0;
 }
 .albumlinkinfo {
     /* font-family: 'Courier New', Courier, monospace; */
@@ -300,7 +300,7 @@ p.caption::before {
     max-width: 500px;
     width: 100%;
     margin: auto;
-    border-radius: 0.25rem;
+    border-radius: 0;
 }
 .albumlinksbar {
     display: flex;
@@ -333,9 +333,9 @@ p.caption::before {
 
 
     & img {
-        border: 1px solid var(--fgcolor);
+        /* border: 1px solid var(--fgcolor); */
         border-radius: var(--mainradius);
-        box-shadow: 2px 2px black;
+        /* box-shadow: 2px 2px black; */
         margin: 0;
     }
 
@@ -348,7 +348,7 @@ p.caption::before {
         transform: translate(-50%, -50%);
         width: 90%;
         color: white;
-        font-family: 'Bizzarri Text';
+        font-family: 'Souvenir';
         /* font-size: clamp(1.5rem, 6cqw, 2.5rem); */
         font-size: 2rem;
         line-height: 1.1;
