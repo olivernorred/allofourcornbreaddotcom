@@ -146,11 +146,17 @@ img, video {
 a {
     color: var(--acolor);
     text-decoration: none;
+    white-space: nowrap;
 }
 a:hover {
     text-decoration: underline;
 }
-
+a:visited {
+    color: purple;
+}
+a:active {
+    color: purple;
+}
 
 
 header, main, footer {
@@ -172,7 +178,7 @@ header > a img {
     display: block;
     max-width: 300px;
     margin: auto;
-    animation: wiggle 2s infinite steps(1);
+    /* animation: wiggle 2s infinite steps(1); */
 }
 header #emaillistbutton {
     margin: auto;
@@ -206,7 +212,7 @@ header #emaillistbutton {
 }
 
 main p {
-    margin: 1rem 0;
+    /* margin: 1rem 0; */
 }
 main img, main video {
     border-radius: 0;
@@ -219,7 +225,7 @@ main h2 {
 b {
 
 }
-#firstgrid {
+.responsive-grid-2-col {
     margin-top: 2rem;
     display: flex;
     gap: 1rem;
@@ -271,6 +277,7 @@ p.caption::before {
 
 .albumlinkcontainer {
     margin: 3rem auto;
+    margin-top: 0;
     max-width: 800px;
 }
 .albumlinkimage {
@@ -350,7 +357,7 @@ p.caption::before {
         color: white;
         font-family: 'Souvenir';
         /* font-size: clamp(1.5rem, 6cqw, 2.5rem); */
-        font-size: 2rem;
+        font-size: 1.5rem;
         line-height: 1.1;
         text-align: center;
         text-shadow: -2px -2px var(--darkblue), 2px -2px var(--darkblue), 2px 2px var(--darkblue), -2px 2px var(--darkblue);
@@ -384,7 +391,7 @@ footer p {
 }
 
 @media only screen and (max-width: 600px) {
-    #firstgrid {
+    .responsive-grid-2-col {
         display: block;
     }
     .quotewithpicture {
